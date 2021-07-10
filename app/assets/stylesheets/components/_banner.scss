@@ -1,0 +1,26 @@
+$hundred: 100%;
+$black: #000000;
+$white: #FFFFFF;
+$ghost_white: #F8F8FF;
+$coral: #FF7F50;
+
+
+.banner{
+    height: $hundred;
+    width: $hundred;
+    padding: 150px;
+    background-size: 70%;
+    input{
+        background-color: $coral;
+    }
+}
+
+
+.container-fluid{
+    width: $hundred; 
+    height: $hundred;
+    h1, p{
+        color: $ghost_white;
+        text-shadow: 2px 2px $black;
+    }
+}

@@ -1,0 +1,18 @@
+<div class="banner" style="background-image: url(https://i.imgur.com/uDCjl0O.jpeg);">
+    <div class="container-fluid">
+        <h1>Check Out</h1>
+        <p>List Your Favorite Movies</p>
+        <%= button_to "Create A List", new_list_bookmark_path(@lists) %>
+    </div>
+</div>
+<div class="cards">
+    <div class="card-category">
+    <h2>My List</h2>
+        <div class="card-trip-infos">
+            <% @lists.each do |list|%>
+                <%=link_to list.name, list_path(list) %>
+            <% end %>
+        </div>
+    </div>
+    <p>TEST</p>
+</div>

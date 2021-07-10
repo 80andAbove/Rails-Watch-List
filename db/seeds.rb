@@ -4,15 +4,15 @@
 require 'faker'
 require 'open-uri'
 Movie.destroy_all
-List.destroy_all
+# List.destroy_all
 
-puts "Generating List"
-5.times do 
-  List.create(
-    name: Faker::Name.name
-  )
-end
-puts "Generating List Completed"
+# puts "Generating List"
+# 5.times do 
+#   List.create(
+#     name: Faker::Name.name
+#   )
+# end
+# puts "Generating List Completed"
 
 # the Le Wagon copy of the API
 url = 'http://tmdb.lewagon.com/movie/top_rated'
