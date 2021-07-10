@@ -12,7 +12,7 @@ class ListsController < ApplicationController
     end
 
     def create
-        @list = List.new
+        @list = List.new(params.require(:list).permit(:name))
         if @list.save
             redirect_to list_path(@list)
         else
