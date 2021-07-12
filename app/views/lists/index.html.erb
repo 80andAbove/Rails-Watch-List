@@ -2,12 +2,22 @@
     <div class="container-fluid">
         <h1>Check Out</h1>
         <p>List Your Favorite Movies</p>
-        <%= button_to "Create A List", new_list_bookmark_path(@lists) %>
+        <%= link_to "Create A List", new_list_path(@list) %>
     </div>
 </div>
-<div class="cards">
-    <div class="card-category">
+<div class="title alignment">
     <h2>My List</h2>
+</div>
+<div class="cards alignment">
+    <div class="card-category">
+        <div class="card-trip-infos">
+            <% @lists.each do |list|%>
+                <%=link_to list.name, list_path(list) %>
+            <% end %>
+        </div>
+    </div>
+
+    <div class="card-category">
         <div class="card-trip-infos">
             <% @lists.each do |list|%>
                 <%=link_to list.name, list_path(list) %>

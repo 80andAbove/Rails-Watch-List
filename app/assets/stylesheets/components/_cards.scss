@@ -1,5 +1,32 @@
+$ghost_white: #F8F8FF;
+
 .cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 16px;
+
+    .card-category {
+        background-size: cover;
+        background-position: center;
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        border-radius: 5px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        background-image: url(https://www.teahub.io/photos/full/41-419488_horror-movie-wallpaper-horror-movie-collage.jpg);
+    }
+
+    a{
+        color: $ghost_white;
+        text-shadow: 1px 1px black;
+    }
+
+    .card-trip-infos{
+         
+    }
 }

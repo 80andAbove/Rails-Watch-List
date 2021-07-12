@@ -1,6 +1,12 @@
 <div class="container">
-    <%= @list.name %>
-    <% @movies.each do |movie| %>
-        <%= movie.title %>
-    <% end %>
+    <h1><%= @list.name %></h1>
+    <div class="row">
+        <% @list.bookmarks.each do |bookmark| %>
+            <p><%= bookmark.movie.title%></p>
+        <% end %>
+    </div>
+    <div class="container">
+        <%= link_to "Add Movies", new_list_bookmark_path(@list, @bookmark) %>
+        <%= link_to "Back to Your List", lists_path %>
+    </div>
 </div>
