@@ -7,6 +7,7 @@
     </div>
     <div class="container">
         <%= link_to "Add Movies", new_list_bookmark_path(@list, @bookmark) %>
+        <%= link_to "Delete List", list_path(@list), method: :delete, data: { confirm: "Are you sure?" } %>
         <%= link_to "Back to Your List", lists_path %>
     </div>
 </div>
