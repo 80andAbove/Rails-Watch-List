@@ -26,3 +26,27 @@
     </div>
     <p>TEST</p>
 </div>
+<div class="title alignment">
+    <h2>Recommended Lists</h2>
+</div>
+<div class="cards alignment">
+    <div class="card-category">
+        <div class="card-trip-infos">
+            <% @lists.each do |list|%>
+                <%=link_to list.name, list_path(list) %>
+            <% end %>
+        </div>
+    </div>
+</div>
+<div class="title alignment">
+    <h2>Your Friends' Lists</h2>
+</div>
+<div class="cards alignment">
+    <div class="card-category">
+        <div class="card-trip-infos">
+            <% @lists.each do |list|%>
+                <%=link_to list.name, list_path(list) %>
+            <% end %>
+        </div>
+    </div>
+</div>
