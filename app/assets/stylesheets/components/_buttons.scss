@@ -1,3 +1,11 @@
+$hundred: 100%;
+$black: #000000;
+$white: #FFFFFF;
+$ghost_white: #F8F8FF;
+$coral: #FF7F50;
+$bottle_green: #006A4E;
+$nice_red: #AA0000;
+
 .create{
     background-color: $coral;
     box-shadow: 1px 1px $black;
@@ -17,4 +25,12 @@
       box-shadow: 1px 1px $black;
       transform: translateY(4px);
     }
+}
+
+.delete{
+    background-color: $nice_red;
+}
+
+.index{
+    background-color: $bottle_green;
 }
