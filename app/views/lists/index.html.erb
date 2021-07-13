@@ -2,16 +2,17 @@
     <div class="container-fluid">
         <h1>Check Out</h1>
         <p>List Your Favorite Movies</p>
-        <%= link_to "Create A List", new_list_path(@list) %>
+        <%= link_to "Create A List", new_list_path(@list), id: "create"%>
     </div>
 </div>
 <div class="title alignment">
     <h2>My List</h2>
 </div>
+<% if @list.present? %>
 <div class="cards alignment">
     <div class="card-category">
         <div class="card-trip-infos">
-            <% @lists.each do |list|%>
+            <% @lists.each do |list| %>
                 <%=link_to list.name, list_path(list) %>
             <% end %>
         </div>
@@ -24,8 +25,8 @@
             <% end %>
         </div>
     </div>
-    <p>TEST</p>
 </div>
+<% end %>
 <div class="title alignment">
     <h2>Recommended Lists</h2>
 </div>
@@ -50,7 +51,3 @@
         </div>
     </div>
 </div>
-
-
-<%= cl_image_tag("THE_IMAGE_ID_FROM_LIBRARY",
-      width: 400, height: 300, crop: :fill) %>
