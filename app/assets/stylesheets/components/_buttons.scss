@@ -6,7 +6,18 @@ $coral: #FF7F50;
 $bottle_green: #006A4E;
 $nice_red: #AA0000;
 
-.create{
+.button{
+    box-shadow: 1px 1px $black;
+    text-decoration: none;
+    border-radius: 2px;
+    padding: 7px;
+    color: $ghost_white;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+#create{
     background-color: $coral;
     box-shadow: 1px 1px $black;
     text-decoration: none;
@@ -27,10 +38,10 @@ $nice_red: #AA0000;
     }
 }
 
-.delete{
+#delete{
     background-color: $nice_red;
 }
 
-.index{
+#index{
     background-color: $bottle_green;
 }

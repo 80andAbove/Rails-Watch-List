@@ -2,13 +2,13 @@
     <div class="container-fluid">
         <h1>Check Out</h1>
         <p>List Your Favorite Movies</p>
-        <%= link_to "Create A List", new_list_path(@list), class: "create"%>
+        <%= link_to "Create A List", new_list_path(@list), class: "button", id: "create" %>
     </div>
 </div>
 <div class="title alignment">
     <h2>My List</h2>
 </div>
-<% if @list.present? %>
+<%# <% if @list.present? %>
 <div class="cards alignment">
     <div class="card-category">
         <div class="card-trip-infos">
@@ -18,7 +18,7 @@
         </div>
     </div>
 </div>
-<% end %>
+<%# <% end %>
 <div class="title alignment">
     <h2>Recommended List</h2>
 </div>
