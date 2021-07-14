@@ -5,7 +5,7 @@
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
   </form>
 </nav>
-<div class="banner" style="background-image: url(https://i.imgur.com/uDCjl0O.jpeg);">
+<div class="banner">
     <div class="container-fluid">
         <h1>Must Watch</h1>
         <p>List Your Favorite Movies</p>
@@ -53,3 +53,28 @@
     </div>
     <% end %>　　
 </div>
+
+<script>
+var i = 0;
+var images = [];
+var slideTime = 3000; // 3 seconds
+const banner = document.querySelector('.banner');
+console.log(banner);
+
+images[0] = 'https://wallpaperaccess.com/full/329583.jpg';
+images[1] = 'https://free4kwallpapers.com/uploads/originals/2019/11/20/bladerunner--movie-scene-wallpaper.jpg';
+images[2] = 'https://images.hdqwalls.com/wallpapers/it-2017-movie-4k-34.jpg';
+
+function changePicture() {
+    banner.style.background-image = "url(" + images[i] + ")";
+
+    if (i < images.length - 1) {
+        i++;
+    } else {
+        i = 0;
+    }
+    setTimeout(changePicture, slideTime);
+}
+
+window.onload = changePicture;
+</script>
