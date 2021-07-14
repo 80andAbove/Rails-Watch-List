@@ -14,6 +14,9 @@ body{
     h1{
         font-style: Courier;
     } 
+    p{
+        color: $ghost_white;
+    }
 }
 
 .title{
@@ -26,4 +29,13 @@ body{
 
 .alignment{
     margin-left: 170px;
+}
+
+.navbar-brand{
+    color: $ghost_white;
+    &:hover{
+        text-decoration: none;
+        color: $ghost_white;
+
+    }
 }
