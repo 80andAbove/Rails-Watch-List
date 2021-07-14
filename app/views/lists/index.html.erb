@@ -32,13 +32,11 @@
     <button type="button" data-toggle="collapse" data-target=".card-recommended"><i class="fas fa-chevron-down"></i></button>
 </div>
 <div class="cards card-recommended alignment">
-    <% @lists.each do |list| %>
     <div class="card-category">
         <div class="card-trip-infos">
-            <%= link_to list.name, list_path(list) %>
+            <img src="https://static01.nyt.com/images/2018/05/03/us/03spongebob_xp/03spongebob_xp-videoSixteenByNineJumbo1600.jpg" alt="">
         </div>
-    </div>
-    <% end %>　　
+    </div>　　
 </div>
 <div class="title alignment">
     <h2>Your Friends' Lists</h2>
@@ -46,13 +44,11 @@
     <button id="up" type="button" data-toggle="collapse" data-target=".card-friends"><i class="fas fa-chevron-up"></i></button>
 </div>
 <div class="cards card-friends alignment">
-    <% @lists.each do |list| %>
     <div class="card-category">
         <div class="card-trip-infos">
-            <%= link_to list.name, list_path(list) %>
+            
         </div>
-    </div>
-    <% end %>　　
+    </div>　　
 </div>
 <div class="footer">
   <div class="footer-links">
