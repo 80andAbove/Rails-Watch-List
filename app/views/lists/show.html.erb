@@ -1,24 +1,29 @@
+<nav class="navbar navbar-light justify-content-between">
+  <%= link_to "Must Watch", lists_path, class: "navbar-brand" %>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
 <div class="container">
     <div class="row">
         <div class="title">
             <h1><%= @list.name %></h1>
         </div>
-            <div class="cards">
+        <div class="cards">
                 <% @list.bookmarks.each do |bookmark| %>
-                <div class="container">
-                    <%= cl_image_tag bookmark.movie.poster_url, height: 500, width: 300 %></p>
-                    <h4><%= bookmark.movie.title %></h4>
-                    <p><%= bookmark.movie.overview %></p>
-                    <p>Rating: <%= bookmark.movie.rating %></p>
-                    <p>Comments: <%= bookmark.comment %></p>
-                </div>
-            <% end %>
-            </div>
-        </div>
+                    <div class="container">
+                        <%= cl_image_tag bookmark.movie.poster_url, height: 500, width: 300 %></p>
+                        <%= button_to "-", list_path(@list), method: :delete, data: { confirm: "Are you sure?" }, id: "delete" %>
+                        <h4 class="movie-detail"><%= bookmark.movie.title %></h4>
+                        <p class="movie-detail"><%= bookmark.movie.overview %></p>
+                        <p class="movie-detail">Rating: <%= bookmark.movie.rating %></p>
+                        <p class="movie-detail">Comments: <%= bookmark.comment %></p>
+                    </div>
+                <% end %>
+            <%= link_to "Add Movie", new_list_bookmark_path(@list, @bookmark), id: "add" %>
         <div class="buttons">
-            <%= link_to "Add Movies", new_list_bookmark_path(@list, @bookmark), class: "button", id: "create" %>
-            <%= link_to "Delete List", list_path(@list), method: :delete, data: { confirm: "Are you sure?" }, class: "button", id: "delete" %>
-            <%= link_to "Back to Your List", lists_path, class: "button", id: "index" %>
+            
         </div>
     </div>
 </div>

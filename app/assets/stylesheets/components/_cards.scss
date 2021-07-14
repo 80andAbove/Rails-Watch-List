@@ -5,6 +5,23 @@ $ghost_white: #F8F8FF;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 16px;
 
+    .movie-detail{
+        visibility: hidden;
+    }
+
+    .container:hover{
+        transform: scale(1.1);
+        transition-duration: 0.8s;
+        
+        .movie-detail{
+            visibility: visible;
+        }
+        
+        .container{
+            opacity: 1;
+        }
+    }
+
     .card-category {
         background-size: cover;
         background-position: center;

@@ -22,6 +22,8 @@ $nice_red: #AA0000;
     margin-bottom: 30px;
 }
 
+
+
 #create{
     background-color: $coral;
     box-shadow: 1px 1px $black;
@@ -30,21 +32,39 @@ $nice_red: #AA0000;
     padding: 7px;
     color: $ghost_white;
     transition-duration: 0.4s;
+    text-align: center;
     overflow: hidden;
     cursor: pointer;
     :hover{
-        background-color: 	#FA8072;
+        background-color: $coral;
     }
+}
 
-    .button:active {
-      background-color: #3e8e41;
-      box-shadow: 1px 1px $black;
-      transform: translateY(4px);
+#add{
+    box-shadow: 1px 1px $black;
+    text-decoration: none;
+    border-radius: 2px;
+    padding: 7px;
+    color: $ghost_white;
+    transition-duration: 0.4s;
+    text-align: center;
+    overflow: hidden;
+    cursor: pointer;
+    font-size: 30px;
+    border: 1px solid white;
+    :hover{
+        background-color: $coral;
     }
 }
 
 #delete{
-    background-color: $nice_red;
+    background-color: transparent;
+    border: 1px solld $nice_red;
+    color: $nice_red;
+    position: relative;
+    top: -510px;
+    left: 274px;
+    border-radius: 80px;
 }
 
 #index{

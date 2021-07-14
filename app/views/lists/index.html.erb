@@ -1,6 +1,13 @@
+<nav class="navbar navbar-light justify-content-between">
+  <a class="navbar-brand">Must Watch</a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
 <div class="banner" style="background-image: url(https://i.imgur.com/uDCjl0O.jpeg);">
     <div class="container-fluid">
-        <h1>Check Out</h1>
+        <h1>Must Watch</h1>
         <p>List Your Favorite Movies</p>
         <%= link_to "Create A List", new_list_path(@list), class: "button", id: "create" %>
     </div>
