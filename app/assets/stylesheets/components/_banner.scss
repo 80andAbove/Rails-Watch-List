@@ -14,7 +14,7 @@ $coral: #FF7F50;
         background-color: $coral;
     }
     background-image: url(avengers.jpg);
-    animation: banner 20s linear infinite 0s;
+    animation: banner 20s linear infinite 3s;
     animation-timing-function: ease-in-out;
 
     @keyframes banner{

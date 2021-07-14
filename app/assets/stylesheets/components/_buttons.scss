@@ -65,13 +65,21 @@ $nice_red: #AA0000;
 
 #delete{
     background-color: transparent;
-    border: 1px solld $nice_red;
+    border: 1px solid $nice_red;
     color: $nice_red;
     position: relative;
     top: -510px;
     left: 274px;
-    border-radius: 80px;
+    border-radius: 80px;    
+    &:hover{
+        content: "Delete Movie?";
+        background-color: white;
+    }
+    &:hover:before{
+        content: "Delete Movie?";
+    }
 }
+
 
 #index{
     background-color: $bottle_green;

@@ -7,24 +7,26 @@
 </nav>
 <div class="container">
     <div class="row">
-        <div class="title">
+        <div class="movie-name">
             <h1><%= @list.name %></h1>
             <%= link_to "+", new_list_bookmark_path(@list, @bookmark), id: "add" %>
         </div>
         <div class="cards">
-                <% @list.bookmarks.each do |bookmark| %>
-                    <div class="container">
-                        <%= cl_image_tag bookmark.movie.poster_url, height: 500, width: 300 %></p>
-                        <%= link_to "-", list_path(@list), method: :delete, data: { confirm: "Are you sure?" }, id: "delete" %>
-                        <div class="movie-detail">
-                            <h4 class="movie-detail" id="movie-title"><%= bookmark.movie.title %></h4>
-                            <p class="movie-detail" id="movie-rating">Rating: <%= bookmark.movie.rating %></p>
-                            <p class="movie-detail" id="movie-overview"><%= bookmark.movie.overview %></p>
-                            <p class="movie-detail" id="movie-comment">Comments: <%= bookmark.comment %></p>
-                        </div>
+            <% @list.bookmarks.each do |bookmark| %>
+                <div class="container">
+                    <span id="movie-poster"><%= cl_image_tag bookmark.movie.poster_url, height: 500, width: 300 %></span>
+                    <%= button_to list_path(@list), method: :delete, data: { confirm: "Are you sure?" }, id: "delete" do %>
+                        <i class="fas fa-minus"></i>
+                    <% end %>
+                        
+                    <div class="movie-detail">
+                        <h4 class="movie-detail" id="movie-title"><%= bookmark.movie.title %></h4>
+                        <p class="movie-detail" id="movie-rating"><%= bookmark.movie.rating %><i class="fas fa-star"></i></p>
+                        <p class="movie-detail" id="movie-overview"><%= bookmark.movie.overview %></p>
+                        <p class="movie-detail" id="movie-comment">Comments: "<%= bookmark.comment %>"</p>
                     </div>
-                <% end %>
-            <%# <%= link_to "Add Movie", new_list_bookmark_path(@list, @bookmark), id: "add" %> %>
+                </div>
+            <% end %>
     </div>
 </div>
 
