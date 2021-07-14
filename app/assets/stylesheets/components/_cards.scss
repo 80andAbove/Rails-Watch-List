@@ -9,11 +9,28 @@ $ghost_white: #F8F8FF;
         visibility: hidden;
     }
 
+    #delete{
+        visibility: hidden;
+    }
+
+    .container{
+        position: relative;
+        display: inline-block;
+    }
+
+    .movie-detail:hover{
+        display: block;
+    }
+
     .container:hover{
         transform: scale(1.1);
         transition-duration: 0.8s;
         
         .movie-detail{
+            visibility: visible;
+        }
+        
+        #delete{
             visibility: visible;
         }
         

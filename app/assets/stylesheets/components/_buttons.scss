@@ -52,6 +52,8 @@ $nice_red: #AA0000;
     cursor: pointer;
     font-size: 30px;
     border: 1px solid white;
+    vertical-align: middle;
+    line-height: 90px;
     :hover{
         background-color: $coral;
     }
