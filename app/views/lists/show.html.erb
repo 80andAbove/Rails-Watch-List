@@ -16,7 +16,7 @@
                         <%= cl_image_tag bookmark.movie.poster_url, height: 500, width: 300 %></p>
                         <%= link_to "-", list_path(@list), method: :delete, data: { confirm: "Are you sure?" }, id: "delete" %>
                         <div class="movie-detail">
-                            <h4 class="movie-detail"><%= bookmark.movie.title %></h4>
+                            <h4 class="movie-detail" id="movie-title"><%= bookmark.movie.title %></h4>
                             <p class="movie-detail"><%= bookmark.movie.overview %></p>
                             <p class="movie-detail">Rating: <%= bookmark.movie.rating %></p>
                             <p class="movie-detail">Comments: <%= bookmark.comment %></p>

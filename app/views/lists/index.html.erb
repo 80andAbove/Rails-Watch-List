@@ -14,39 +14,42 @@
 </div>
 <div class="title alignment">
     <h2>My List</h2>
+    <button type="button" data-toggle="collapse" data-target=".cards"><i class="fas fa-chevron-down"></i></button>
 </div>
 <%# <% if @list.present? %>
 <div class="cards alignment">
+    <% @lists.each do |list| %>
     <div class="card-category">
         <div class="card-trip-infos">
-            <% @lists.each do |list| %>
-                <%=link_to list.name, list_path(list) %>
-            <% end %>
+            <%= link_to list.name, list_path(list) %>
         </div>
     </div>
+    <% end %>　　
 </div>
 <%# <% end %>
 <div class="title alignment">
     <h2>Recommended List</h2>
+    <button type="button" data-toggle="collapse" data-target=".card-personal"><i class="fas fa-chevron-down"></i></button>
 </div>
-<div class="cards alignment">
+<div class="cards card-personal alignment">
+    <% @lists.each do |list| %>
     <div class="card-category">
         <div class="card-trip-infos">
-            <% @lists.each do |list|%>
-                <%=link_to list.name, list_path(list) %>
-            <% end %>
+            <%= link_to list.name, list_path(list) %>
         </div>
     </div>
+    <% end %>　　
 </div>
 <div class="title alignment">
     <h2>Your Friends' Lists</h2>
+    <button type="button" data-toggle="collapse" data-target=".card-recommended"><i class="fas fa-chevron-down"></i></button>
 </div>
-<div class="cards alignment">
+<div class="cards card-recommended alignment">
+    <% @lists.each do |list| %>
     <div class="card-category">
         <div class="card-trip-infos">
-            <% @lists.each do |list|%>
-                <%=link_to list.name, list_path(list) %>
-            <% end %>
+            <%= link_to list.name, list_path(list) %>
         </div>
     </div>
+    <% end %>　　
 </div>
