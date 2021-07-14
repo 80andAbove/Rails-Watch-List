@@ -1,0 +1,21 @@
+
+<script>
+    const movie_container = document.querySelector('.cards .container');
+    console.log(movie_container);
+    const movie_details = document.querySelector('.cards .container .movie-detail');
+    console.log(movie_details);
+
+    movie_container.addEventListener("mouseenter", (event) => {
+        movie_details.innerHTML = "";
+        movie_details.insertAdjacentHTML(
+            'beforeend',
+            `
+            <h4 class="movie-detail" id="movie-title">${<%= bookmark.movie.title %></h4>}
+            <p class="movie-detail"><%= bookmark.movie.overview %></p>
+            <p class="movie-detail">Rating: <%= bookmark.movie.rating %></p>
+            <p class="movie-detail">Comments: <%= bookmark.comment %></p>
+            `
+        );
+    });
+    
+</script>

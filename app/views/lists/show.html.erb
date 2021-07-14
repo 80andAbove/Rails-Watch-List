@@ -9,6 +9,7 @@
     <div class="row">
         <div class="title">
             <h1><%= @list.name %></h1>
+            <%= link_to "+", new_list_bookmark_path(@list, @bookmark), id: "add" %>
         </div>
         <div class="cards">
                 <% @list.bookmarks.each do |bookmark| %>
@@ -17,15 +18,13 @@
                         <%= link_to "-", list_path(@list), method: :delete, data: { confirm: "Are you sure?" }, id: "delete" %>
                         <div class="movie-detail">
                             <h4 class="movie-detail" id="movie-title"><%= bookmark.movie.title %></h4>
-                            <p class="movie-detail"><%= bookmark.movie.overview %></p>
-                            <p class="movie-detail">Rating: <%= bookmark.movie.rating %></p>
-                            <p class="movie-detail">Comments: <%= bookmark.comment %></p>
+                            <p class="movie-detail" id="movie-rating">Rating: <%= bookmark.movie.rating %></p>
+                            <p class="movie-detail" id="movie-overview"><%= bookmark.movie.overview %></p>
+                            <p class="movie-detail" id="movie-comment">Comments: <%= bookmark.comment %></p>
                         </div>
                     </div>
                 <% end %>
-            <%= link_to "Add Movie", new_list_bookmark_path(@list, @bookmark), id: "add" %>
-        <div class="buttons">
-            
-        </div>
+            <%# <%= link_to "Add Movie", new_list_bookmark_path(@list, @bookmark), id: "add" %> %>
     </div>
 </div>
+

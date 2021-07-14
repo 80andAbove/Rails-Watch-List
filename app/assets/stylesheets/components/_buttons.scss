@@ -53,10 +53,14 @@ $nice_red: #AA0000;
     font-size: 30px;
     border: 1px solid white;
     vertical-align: middle;
-    line-height: 90px;
-    :hover{
-        background-color: $coral;
-    }
+}
+
+#add:hover{
+    background-color: $coral;
+}
+
+#add:hover:before{
+    content: "Add a Movie";
 }
 
 #delete{

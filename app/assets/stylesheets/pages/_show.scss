@@ -9,8 +9,20 @@
     margin-bottom: 50px;
     padding: 10px;
     color: $ghost_white;
+    display: flex;
+    justify-content: space-between;
+    width: 96%;
 }
 
-#movie-title{
-    font-weight: bold;
+.movie-detail{
+    #movie-title{
+        font-weight: bold;
+    }
+    #movie-rating{
+
+    }
+    #movie-overview{
+        font-style: italic;
+    }
 }
+

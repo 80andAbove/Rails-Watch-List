@@ -54,27 +54,3 @@
     <% end %>　　
 </div>
 
-<script>
-var i = 0;
-var images = [];
-var slideTime = 3000; // 3 seconds
-const banner = document.querySelector('.banner');
-console.log(banner);
-
-images[0] = 'https://wallpaperaccess.com/full/329583.jpg';
-images[1] = 'https://free4kwallpapers.com/uploads/originals/2019/11/20/bladerunner--movie-scene-wallpaper.jpg';
-images[2] = 'https://images.hdqwalls.com/wallpapers/it-2017-movie-4k-34.jpg';
-
-function changePicture() {
-    banner.style.background-image = "url(" + images[i] + ")";
-
-    if (i < images.length - 1) {
-        i++;
-    } else {
-        i = 0;
-    }
-    setTimeout(changePicture, slideTime);
-}
-
-window.onload = changePicture;
-</script>
