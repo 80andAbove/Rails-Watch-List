@@ -1,18 +1,28 @@
 <nav class="navbar navbar-light justify-content-between">
-  <a class="navbar-brand">Must Watch</a>
+  <%= link_to "Must Watch", lists_path, class: "navbar-brand" %>
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
   </form>
 </nav>
 <div class="container">
-  <div class="container-form">
-      <h1>Add a list </h1>
-      <%= simple_form_for @list do |f| %>
-        <%= f.input :name %>
+  <div class="row">
+    <div>
+        <h1>Add a list </h1>
+    </div>
+    <div class="list-form">
+      <div class="col" id="img-side">
+        <img id="graduate" src="https://hips.hearstapps.com/esq.h-cdn.co/assets/cm/15/06/54d4543232970_-_esq-graduate-high.jpg" alt="graduate">
+      </div>
+      <div class="col-5" id="form-side">
+        <%= simple_form_for @list do |f| %>
+        <%= f.input :name, placeholder: "Enter List Name" %>
         <%= f.input :photo, as: :file %>
-        <%= f.submit "Submit", class: "btn btn-primary" %>
+        <%= f.submit "Submit", class: "btn btn-primary", id: "submit" %>
       <% end %>
+      </div>
+    </div>
+      
   </div>
 </div>
 <div class="footer">

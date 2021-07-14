@@ -41,9 +41,7 @@ $nice_red: #AA0000;
 }
 
 #add{
-    box-shadow: 1px 1px $black;
     text-decoration: none;
-    border-radius: 2px;
     padding: 7px;
     color: $ghost_white;
     transition-duration: 0.4s;
@@ -51,17 +49,21 @@ $nice_red: #AA0000;
     overflow: hidden;
     cursor: pointer;
     font-size: 30px;
-    border: 1px solid white;
+    background-color: transparent;
     vertical-align: middle;
+    border: none;
+    &:hover{
+        content: "Add A movie";
+        border-radius: 5px;
+        background-color: $coral;
+        box-shadow: 1px 1px $ghost_white
+    }
+    &:hover:before{
+        content: "Add a Movie";
+    }
 }
 
-#add:hover{
-    background-color: $coral;
-}
 
-#add:hover:before{
-    content: "Add a Movie";
-}
 
 #delete{
     background-color: transparent;
@@ -86,5 +88,7 @@ $nice_red: #AA0000;
 }
 
 #submit{
-    background-color: blue;
+    background-color: #00308F;
+    border-radius: 5px;
+    box-shadow: 0.3px 0.3px white;
 }

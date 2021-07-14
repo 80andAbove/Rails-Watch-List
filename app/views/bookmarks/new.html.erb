@@ -10,15 +10,15 @@
     <div class="">
       <h1 id="add-movie">Add a Movie </h1>
     </div>
-    <div class="form">
-      <div class="col-56">
+    <div class="bookmark-form">
+      <div class="col" id="img-side">
         <img src="https://airows.com/.image/c_limit%2Ccs_srgb%2Cq_auto:good%2Cw_860/MTM2NTE0MTA4NTAwNDg1NzI5/original-9572-1438602103-3jpg.webp" alt="movie-collage">
       </div>
-      <div class="col-6">
+      <div class="col-6" id="form-side">
         <%= simple_form_for [@list, @bookmark] do |f| %>
-          <%= f.association :movie,  input_html: { class: "form-control", id: "movie" }, label: "Select a Movie" %> %>
-          <%= f.input :comment,  input_html: { class: "form-control", id: "comment" }, label: "Add Comments", placeholder: "Must be at least 6 characters", error: "Must be at least 6 characters" %>
-          <%= f.submit "Submit", class: "button", id: "submit" %>
+          <%= f.association :movie,  input_html: { id: "movie" }, label: "Select a Movie", placeholder: "Select a Movie" %> %>
+          <%= f.input :comment,  input_html: { id: "comment" }, label: "Add Comments", placeholder: "Must be at least 6 characters", error: "Must be at least 6 characters" %>
+          <%= f.submit "Submit", class: "btn btn-primary", id: "submit" %>
         <% end %>
       </div>
     </div>
