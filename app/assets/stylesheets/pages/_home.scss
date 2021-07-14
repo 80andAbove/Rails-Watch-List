@@ -1,4 +1,11 @@
 // Specific CSS for your home-page
+
+$hundred: 100%;
+$black: #000000;
+$white: #FFFFFF;
+$ghost_white: #F8F8FF;
+$coral: #FF7F50;
+
 body{
     background-color: $black;
 }
@@ -6,6 +13,9 @@ body{
 .container{
     h1{
         font-style: Courier;
-    }
-    
+    } 
+}
+
+.alignment{
+    margin-left: 170px;
 }
