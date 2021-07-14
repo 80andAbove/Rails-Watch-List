@@ -39,3 +39,17 @@ body{
 
     }
 }
+
+button{
+    border: none;
+    background-color: transparent;
+    outline: none;
+    margin-left: 15px;
+    .fas{
+        color: white;
+        border: none;
+    }
+    #up{
+        display: none;
+    }
+}

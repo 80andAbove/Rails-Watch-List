@@ -42,7 +42,8 @@
 </div>
 <div class="title alignment">
     <h2>Your Friends' Lists</h2>
-    <button type="button" data-toggle="collapse" data-target=".card-friends"><i class="fas fa-chevron-down"></i></button>
+    <button id="down" type="button" data-toggle="collapse" data-target=".card-friends"><i class="fas fa-chevron-down"></i></button>
+    <button id="up" type="button" data-toggle="collapse" data-target=".card-friends"><i class="fas fa-chevron-up"></i></button>
 </div>
 <div class="cards card-friends alignment">
     <% @lists.each do |list| %>
@@ -67,3 +68,14 @@
   </div>
 </div>
 
+<script>
+    const collapse = document.querySelector('.title button');
+    console.log(collapse);
+    const collapse_down_icon = document.querySelector('.title button #down');
+    console.log(collapse_down_icon);
+    const collapse_up_icon = document.querySelector('.title button #up');
+    console.log(collapse_up_icon);
+    collapse.addEventListener("click", (event) => {
+        collapse_icon = collapse_up_icon;
+    });
+</script>
