@@ -45,8 +45,7 @@
 </div>
 <div class="title alignment">
     <h2>Your Friends' Lists</h2>
-    <button id="down" type="button" data-toggle="collapse" data-target=".card-friends"><i class="fas fa-chevron-down"></i></button>
-    <button id="up" type="button" data-toggle="collapse" data-target=".card-friends"><i class="fas fa-chevron-up"></i></button>
+    <button id="button" type="button" data-toggle="collapse" data-target=".card-friends"><i class="icon fas fa-chevron-down"></i></button>
 </div>
 <div class="cards card-friends alignment">
     <div class="card-category">
@@ -70,13 +69,16 @@
 </div>
 
 <script>
-    const collapse = document.querySelector('.title button');
-    console.log(collapse);
-    const collapse_down_icon = document.querySelector('.title button #down');
-    console.log(collapse_down_icon);
-    const collapse_up_icon = document.querySelector('.title button #up');
-    console.log(collapse_up_icon);
-    collapse.addEventListener("click", (event) => {
-        collapse_down_icon = collapse_up_icon;
+    
+    const collapse_button = document.querySelector('#button');
+    const collapse_icon = document.querySelector('.icon');
+        // console.log(collapse_icon);
+        
+    collapse_button.addEventListener("click", (event) => {
+        if (collapse_icon.classList.contains('fa-chevron-down')) {
+            collapse_icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
+        } else {
+            collapse_icon.classList.replace('fa-chevron-up', 'fa-chevron-down');
+        };
     });
 </script>

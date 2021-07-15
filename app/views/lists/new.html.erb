@@ -11,15 +11,18 @@
         <h1>Add a list </h1>
     </div>
     <div class="list-form">
-      <div class="col" id="img-side">
-        <img id="graduate" src="https://hips.hearstapps.com/esq.h-cdn.co/assets/cm/15/06/54d4543232970_-_esq-graduate-high.jpg" alt="graduate">
+      <div class="col" id="form-side">
+          <%= simple_form_for @list do |f| %>
+          <%= f.input :name, placeholder: "Enter List Name" %>
+          <%= f.input :photo, as: :file %>
+          <%= f.submit "Submit", class: "btn btn-primary", id: "submit" %>
+        <% end %>
       </div>
-      <div class="col-5" id="form-side">
-        <%= simple_form_for @list do |f| %>
-        <%= f.input :name, placeholder: "Enter List Name" %>
-        <%= f.input :photo, as: :file %>
-        <%= f.submit "Submit", class: "btn btn-primary", id: "submit" %>
-      <% end %>
+      <div class="col-7" id="img-side">
+        <figure>
+          <img id="graduate" src="https://hips.hearstapps.com/esq.h-cdn.co/assets/cm/15/06/54d4543232970_-_esq-graduate-high.jpg" alt="graduate">
+          <figcaption style="color: white;">Graduate (1967)</figcaption>
+        </figure>
       </div>
     </div>
       
