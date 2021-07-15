@@ -20,15 +20,13 @@
 <div class="cards card-personal alignment">
     <% @lists.each do |list| %>
     <div class="card-category">
-        <div class="card-trip-infos">
             <% if list.photo.attached? %>
-                <%= link_to list.name, list_path(list) %>
-                <%= cl_image_tag list.photo.key, height: 300, width: 400, crop: :fill %> 
+                <p style="background-image: url(<%= cl_image_path list.photo.key %>); background-size: 100%; width: 260px; height: 260px; background-repeat: no-repeat;""><%= link_to list.name, list_path(list) %></p>
+                <%# <%= cl_image_tag list.photo.key, height: 200 width: 200, crop: :fill %>
             <% else %>
-                <%= link_to list.name, list_path(list) %>
-                <img src="https://source.unsplash.com/random" alt="unsplash" style="width: 300px; height: 300px;"></img>
+                <p style="background-image: url(https://source.unsplash.com/random) background-size: 100%; width: 260px; height: 260px; background-repeat: no-repeat;"> <%= link_to list.name, list_path(list) %></p>
+                <%# <img src="" alt="unsplash" style="width: 300px; height: 300px;"></img> %>
             <% end %>
-        </div>
     </div>
     <% end %>　　
 </div>
@@ -73,7 +71,7 @@
     const collapse_button = document.querySelector('#button');
     const collapse_icon = document.querySelector('.icon');
         // console.log(collapse_icon);
-        
+
     collapse_button.addEventListener("click", (event) => {
         if (collapse_icon.classList.contains('fa-chevron-down')) {
             collapse_icon.classList.replace('fa-chevron-down', 'fa-chevron-up');
