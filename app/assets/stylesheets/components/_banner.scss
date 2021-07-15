@@ -13,28 +13,25 @@ $coral: #FF7F50;
     input{
         background-color: $coral;
     }
-    background-image: url(app/assets/images/avengers.jpg);
+    background-image: url(https://wallpaperaccess.com/full/329583.jpg);
     animation: banner 20s linear infinite 3s;
     animation-timing-function: ease-in-out;
 
     @keyframes banner{
         0%{
-            background-image: url(avengers.jpg);
+            background-image: url(https://wallpaperaccess.com/full/329583.jpg);
         }
-        20%{
-            background-image: url(batman.jpg);
+        25%{
+            background-image: url(https://wallpapercave.com/wp/Rc3r14M.jpg);
         }
-        40%{
-            background-image: url(pennywise.jpg);
+        50%{
+            background-image: url(https://images.hdqwalls.com/wallpapers/it-2017-movie-4k-34.jpg);
         }
-        60%{
-            background-image: url(drive.png);
-        }
-        80%{
-            background-image: url(doraemon.jpg);
+        75%{
+            background-image: url(https://wallpapercave.com/wp/wp2751453.jpg);
         }
         100%{
-            background-image: url(darthvader.jpg);
+            background-image: url(https://cdn.wallpapersafari.com/10/12/LJG9Or.jpg);
         }
     }
 }
